@@ -1,0 +1,1341 @@
+{
+    "flowContents": {
+        "identifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+        "name": "Berlin to_table_WeatherData2",
+        "comments": "",
+        "position": {
+            "x": 1040.0,
+            "y": 200.0
+        },
+        "processGroups": [],
+        "remoteProcessGroups": [],
+        "processors": [
+            {
+                "identifier": "586dee64-6b28-3786-8377-12615ef14dd9",
+                "name": "InvokeHTTP",
+                "comments": "",
+                "position": {
+                    "x": 504.0,
+                    "y": -96.0
+                },
+                "bundle": {
+                    "group": "org.apache.nifi",
+                    "artifact": "nifi-standard-nar",
+                    "version": "1.12.0"
+                },
+                "style": {},
+                "type": "org.apache.nifi.processors.standard.InvokeHTTP",
+                "properties": {
+                    "Proxy Host": null,
+                    "Attributes to Send": null,
+                    "use-etag": "false",
+                    "proxy-configuration-service": null,
+                    "Proxy Type": "http",
+                    "Connection Timeout": "5 secs",
+                    "send-message-body": "true",
+                    "set-form-filename": "true",
+                    "Always Output Response": "false",
+                    "etag-max-cache-size": "10MB",
+                    "idle-timeout": "5 mins",
+                    "Put Response Body In Attribute": null,
+                    "Use Chunked Encoding": "false",
+                    "Follow Redirects": "True",
+                    "Remote URL": "https://api.openweathermap.org/data/2.5/weather?lat=52.533658&lon=13.546291&appid=0123456789",
+                    "Content-Type": "${mime.type}",
+                    "form-body-form-name": null,
+                    "max-idle-connections": "5",
+                    "invokehttp-proxy-user": null,
+                    "Read Timeout": "15 secs",
+                    "Max Length To Put In Attribute": "256",
+                    "ignore-response-content": "false",
+                    "Proxy Port": null,
+                    "SSL Context Service": null,
+                    "Digest Authentication": "false",
+                    "HTTP Method": "GET",
+                    "Add Response Headers to Request": "false",
+                    "Basic Authentication Username": null,
+                    "Include Date Header": "True",
+                    "Penalize on \"No Retry\"": "false",
+                    "Useragent": null
+                },
+                "propertyDescriptors": {
+                    "Proxy Host": {
+                        "name": "Proxy Host",
+                        "displayName": "Proxy Host",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Attributes to Send": {
+                        "name": "Attributes to Send",
+                        "displayName": "Attributes to Send",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "use-etag": {
+                        "name": "use-etag",
+                        "displayName": "Use HTTP ETag",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "proxy-configuration-service": {
+                        "name": "proxy-configuration-service",
+                        "displayName": "Proxy Configuration Service",
+                        "identifiesControllerService": true,
+                        "sensitive": false
+                    },
+                    "Proxy Type": {
+                        "name": "Proxy Type",
+                        "displayName": "Proxy Type",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Basic Authentication Password": {
+                        "name": "Basic Authentication Password",
+                        "displayName": "Basic Authentication Password",
+                        "identifiesControllerService": false,
+                        "sensitive": true
+                    },
+                    "Connection Timeout": {
+                        "name": "Connection Timeout",
+                        "displayName": "Connection Timeout",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "send-message-body": {
+                        "name": "send-message-body",
+                        "displayName": "Send Message Body",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "set-form-filename": {
+                        "name": "set-form-filename",
+                        "displayName": "Set Flowfile Form Data File Name",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Always Output Response": {
+                        "name": "Always Output Response",
+                        "displayName": "Always Output Response",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "etag-max-cache-size": {
+                        "name": "etag-max-cache-size",
+                        "displayName": "Maximum ETag Cache Size",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "idle-timeout": {
+                        "name": "idle-timeout",
+                        "displayName": "Idle Timeout",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Put Response Body In Attribute": {
+                        "name": "Put Response Body In Attribute",
+                        "displayName": "Put Response Body In Attribute",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Use Chunked Encoding": {
+                        "name": "Use Chunked Encoding",
+                        "displayName": "Use Chunked Encoding",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Follow Redirects": {
+                        "name": "Follow Redirects",
+                        "displayName": "Follow Redirects",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Remote URL": {
+                        "name": "Remote URL",
+                        "displayName": "Remote URL",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Content-Type": {
+                        "name": "Content-Type",
+                        "displayName": "Content-Type",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "form-body-form-name": {
+                        "name": "form-body-form-name",
+                        "displayName": "Flowfile Form Data Name",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "max-idle-connections": {
+                        "name": "max-idle-connections",
+                        "displayName": "Max Idle Connections",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "invokehttp-proxy-user": {
+                        "name": "invokehttp-proxy-user",
+                        "displayName": "Proxy Username",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Read Timeout": {
+                        "name": "Read Timeout",
+                        "displayName": "Read Timeout",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Max Length To Put In Attribute": {
+                        "name": "Max Length To Put In Attribute",
+                        "displayName": "Max Length To Put In Attribute",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "invokehttp-proxy-password": {
+                        "name": "invokehttp-proxy-password",
+                        "displayName": "Proxy Password",
+                        "identifiesControllerService": false,
+                        "sensitive": true
+                    },
+                    "ignore-response-content": {
+                        "name": "ignore-response-content",
+                        "displayName": "Ignore response's content",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Proxy Port": {
+                        "name": "Proxy Port",
+                        "displayName": "Proxy Port",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "SSL Context Service": {
+                        "name": "SSL Context Service",
+                        "displayName": "SSL Context Service",
+                        "identifiesControllerService": true,
+                        "sensitive": false
+                    },
+                    "Digest Authentication": {
+                        "name": "Digest Authentication",
+                        "displayName": "Use Digest Authentication",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "HTTP Method": {
+                        "name": "HTTP Method",
+                        "displayName": "HTTP Method",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Add Response Headers to Request": {
+                        "name": "Add Response Headers to Request",
+                        "displayName": "Add Response Headers to Request",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Basic Authentication Username": {
+                        "name": "Basic Authentication Username",
+                        "displayName": "Basic Authentication Username",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Include Date Header": {
+                        "name": "Include Date Header",
+                        "displayName": "Include Date Header",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Penalize on \"No Retry\"": {
+                        "name": "Penalize on \"No Retry\"",
+                        "displayName": "Penalize on \"No Retry\"",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Useragent": {
+                        "name": "Useragent",
+                        "displayName": "Useragent",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    }
+                },
+                "schedulingPeriod": "61 sec",
+                "schedulingStrategy": "TIMER_DRIVEN",
+                "executionNode": "ALL",
+                "penaltyDuration": "30 sec",
+                "yieldDuration": "1 sec",
+                "bulletinLevel": "INFO",
+                "runDurationMillis": 0,
+                "concurrentlySchedulableTaskCount": 1,
+                "autoTerminatedRelationships": [],
+                "scheduledState": "ENABLED",
+                "componentType": "PROCESSOR",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "d7cac7f6-0152-3584-a145-4f87fe59b7f4",
+                "name": "PutSQL",
+                "comments": "",
+                "position": {
+                    "x": 504.0,
+                    "y": 640.0
+                },
+                "bundle": {
+                    "group": "org.apache.nifi",
+                    "artifact": "nifi-standard-nar",
+                    "version": "1.12.0"
+                },
+                "style": {},
+                "type": "org.apache.nifi.processors.standard.PutSQL",
+                "properties": {
+                    "Support Fragmented Transactions": "true",
+                    "putsql-sql-statement": null,
+                    "Transaction Timeout": null,
+                    "Batch Size": "100",
+                    "Obtain Generated Keys": "false",
+                    "JDBC Connection Pool": "91718fa3-790e-30df-aa19-301ffb6119ba",
+                    "database-session-autocommit": "false",
+                    "rollback-on-failure": "false"
+                },
+                "propertyDescriptors": {
+                    "Support Fragmented Transactions": {
+                        "name": "Support Fragmented Transactions",
+                        "displayName": "Support Fragmented Transactions",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "putsql-sql-statement": {
+                        "name": "putsql-sql-statement",
+                        "displayName": "SQL Statement",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Transaction Timeout": {
+                        "name": "Transaction Timeout",
+                        "displayName": "Transaction Timeout",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Batch Size": {
+                        "name": "Batch Size",
+                        "displayName": "Batch Size",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Obtain Generated Keys": {
+                        "name": "Obtain Generated Keys",
+                        "displayName": "Obtain Generated Keys",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "JDBC Connection Pool": {
+                        "name": "JDBC Connection Pool",
+                        "displayName": "JDBC Connection Pool",
+                        "identifiesControllerService": true,
+                        "sensitive": false
+                    },
+                    "database-session-autocommit": {
+                        "name": "database-session-autocommit",
+                        "displayName": "Database Session AutoCommit",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "rollback-on-failure": {
+                        "name": "rollback-on-failure",
+                        "displayName": "Rollback On Failure",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    }
+                },
+                "schedulingPeriod": "0 sec",
+                "schedulingStrategy": "TIMER_DRIVEN",
+                "executionNode": "ALL",
+                "penaltyDuration": "30 sec",
+                "yieldDuration": "1 sec",
+                "bulletinLevel": "WARN",
+                "runDurationMillis": 0,
+                "concurrentlySchedulableTaskCount": 1,
+                "autoTerminatedRelationships": [],
+                "scheduledState": "ENABLED",
+                "componentType": "PROCESSOR",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "94d24a20-929e-31cd-b5fc-60a3f549f0b0",
+                "name": "JoltTransformJSON",
+                "comments": "",
+                "position": {
+                    "x": 504.0,
+                    "y": 128.0
+                },
+                "bundle": {
+                    "group": "org.apache.nifi",
+                    "artifact": "nifi-standard-nar",
+                    "version": "1.12.0"
+                },
+                "style": {},
+                "type": "org.apache.nifi.processors.standard.JoltTransformJSON",
+                "properties": {
+                    "jolt-spec": "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"coord\": {\n        \"lon\": \"lon\",\n        \"lat\": \"lat\"\n      },\n      \"weather\": {\n        \"0\": {\n          \"id\": \"weather_id\",\n          \"main\": \"weather_main\",\n          \"description\": \"weather_description\"\n        }\n      },\n      \"main\": {\n        \"temp\": \"temp\",\n        \"feels_like\": \"feels_like\",\n        \"temp_min\": \"temp_min\",\n        \"temp_max\": \"temp_max\",\n        \"pressure\": \"pressure\",\n        \"humidity\": \"humidity\"\n      },\n      \"wind\": {\n        \"speed\": \"wind_speed\",\n        \"deg\": \"wind_deg\"\n      },\n      \"clouds\": {\n        \"all\": \"clouds_all\"\n      },\n      \"dt\": \"dt\",\n      \"sys\": {\n        \"country\": \"country\",\n        \"sunrise\": \"sunrise\",\n        \"sunset\": \"sunset\"\n      },\n      \"timezone\": \"timezone\",\n      \"name\": \"name\"\n    }\n  }\n]\n",
+                    "jolt-transform": "jolt-transform-chain",
+                    "jolt-custom-class": null,
+                    "jolt-custom-modules": null,
+                    "pretty_print": "false",
+                    "Transform Cache Size": "1"
+                },
+                "propertyDescriptors": {
+                    "jolt-spec": {
+                        "name": "jolt-spec",
+                        "displayName": "Jolt Specification",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "jolt-transform": {
+                        "name": "jolt-transform",
+                        "displayName": "Jolt Transformation DSL",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "jolt-custom-class": {
+                        "name": "jolt-custom-class",
+                        "displayName": "Custom Transformation Class Name",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "jolt-custom-modules": {
+                        "name": "jolt-custom-modules",
+                        "displayName": "Custom Module Directory",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "pretty_print": {
+                        "name": "pretty_print",
+                        "displayName": "Pretty Print",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Transform Cache Size": {
+                        "name": "Transform Cache Size",
+                        "displayName": "Transform Cache Size",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    }
+                },
+                "schedulingPeriod": "0 sec",
+                "schedulingStrategy": "TIMER_DRIVEN",
+                "executionNode": "ALL",
+                "penaltyDuration": "30 sec",
+                "yieldDuration": "1 sec",
+                "bulletinLevel": "WARN",
+                "runDurationMillis": 0,
+                "concurrentlySchedulableTaskCount": 1,
+                "autoTerminatedRelationships": [],
+                "scheduledState": "ENABLED",
+                "componentType": "PROCESSOR",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "f6de5fe3-e4f1-35d7-b40f-39c84a7d3653",
+                "name": "ConvertJSONToSQL",
+                "comments": "",
+                "position": {
+                    "x": 504.0,
+                    "y": 360.0
+                },
+                "bundle": {
+                    "group": "org.apache.nifi",
+                    "artifact": "nifi-standard-nar",
+                    "version": "1.12.0"
+                },
+                "style": {},
+                "type": "org.apache.nifi.processors.standard.ConvertJSONToSQL",
+                "properties": {
+                    "table-schema-cache-size": "100",
+                    "Table Name": "WeatherData2",
+                    "Catalog Name": null,
+                    "jts-sql-param-attr-prefix": "sql",
+                    "Schema Name": null,
+                    "Unmatched Field Behavior": "Ignore Unmatched Fields",
+                    "Unmatched Column Behavior": "Ignore Unmatched Columns",
+                    "jts-quoted-identifiers": "false",
+                    "jts-quoted-table-identifiers": "false",
+                    "JDBC Connection Pool": "91718fa3-790e-30df-aa19-301ffb6119ba",
+                    "Update Keys": null,
+                    "Translate Field Names": "true",
+                    "Statement Type": "INSERT"
+                },
+                "propertyDescriptors": {
+                    "table-schema-cache-size": {
+                        "name": "table-schema-cache-size",
+                        "displayName": "Table Schema Cache Size",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Table Name": {
+                        "name": "Table Name",
+                        "displayName": "Table Name",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Catalog Name": {
+                        "name": "Catalog Name",
+                        "displayName": "Catalog Name",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "jts-sql-param-attr-prefix": {
+                        "name": "jts-sql-param-attr-prefix",
+                        "displayName": "SQL Parameter Attribute Prefix",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Schema Name": {
+                        "name": "Schema Name",
+                        "displayName": "Schema Name",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Unmatched Field Behavior": {
+                        "name": "Unmatched Field Behavior",
+                        "displayName": "Unmatched Field Behavior",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Unmatched Column Behavior": {
+                        "name": "Unmatched Column Behavior",
+                        "displayName": "Unmatched Column Behavior",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "jts-quoted-identifiers": {
+                        "name": "jts-quoted-identifiers",
+                        "displayName": "Quote Column Identifiers",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "jts-quoted-table-identifiers": {
+                        "name": "jts-quoted-table-identifiers",
+                        "displayName": "Quote Table Identifiers",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "JDBC Connection Pool": {
+                        "name": "JDBC Connection Pool",
+                        "displayName": "JDBC Connection Pool",
+                        "identifiesControllerService": true,
+                        "sensitive": false
+                    },
+                    "Update Keys": {
+                        "name": "Update Keys",
+                        "displayName": "Update Keys",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Translate Field Names": {
+                        "name": "Translate Field Names",
+                        "displayName": "Translate Field Names",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Statement Type": {
+                        "name": "Statement Type",
+                        "displayName": "Statement Type",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    }
+                },
+                "schedulingPeriod": "0 sec",
+                "schedulingStrategy": "TIMER_DRIVEN",
+                "executionNode": "ALL",
+                "penaltyDuration": "30 sec",
+                "yieldDuration": "1 sec",
+                "bulletinLevel": "WARN",
+                "runDurationMillis": 0,
+                "concurrentlySchedulableTaskCount": 1,
+                "autoTerminatedRelationships": [],
+                "scheduledState": "ENABLED",
+                "componentType": "PROCESSOR",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "f7382d3c-2253-3e03-b593-a94ce356317e",
+                "name": "LogAttribute",
+                "comments": "",
+                "position": {
+                    "x": 1128.0,
+                    "y": -96.0
+                },
+                "bundle": {
+                    "group": "org.apache.nifi",
+                    "artifact": "nifi-standard-nar",
+                    "version": "1.12.0"
+                },
+                "style": {},
+                "type": "org.apache.nifi.processors.standard.LogAttribute",
+                "properties": {
+                    "Log prefix": null,
+                    "character-set": "UTF-8",
+                    "Log Level": "info",
+                    "attributes-to-ignore-regex": null,
+                    "Attributes to Ignore": null,
+                    "Attributes to Log": null,
+                    "attributes-to-log-regex": ".*",
+                    "Log Payload": "false"
+                },
+                "propertyDescriptors": {
+                    "Log prefix": {
+                        "name": "Log prefix",
+                        "displayName": "Log prefix",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "character-set": {
+                        "name": "character-set",
+                        "displayName": "Character Set",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Log Level": {
+                        "name": "Log Level",
+                        "displayName": "Log Level",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "attributes-to-ignore-regex": {
+                        "name": "attributes-to-ignore-regex",
+                        "displayName": "Attributes to Ignore by Regular Expression",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Attributes to Ignore": {
+                        "name": "Attributes to Ignore",
+                        "displayName": "Attributes to Ignore",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Attributes to Log": {
+                        "name": "Attributes to Log",
+                        "displayName": "Attributes to Log",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "attributes-to-log-regex": {
+                        "name": "attributes-to-log-regex",
+                        "displayName": "Attributes to Log by Regular Expression",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Log Payload": {
+                        "name": "Log Payload",
+                        "displayName": "Log Payload",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    }
+                },
+                "schedulingPeriod": "0 sec",
+                "schedulingStrategy": "TIMER_DRIVEN",
+                "executionNode": "ALL",
+                "penaltyDuration": "30 sec",
+                "yieldDuration": "1 sec",
+                "bulletinLevel": "WARN",
+                "runDurationMillis": 0,
+                "concurrentlySchedulableTaskCount": 1,
+                "autoTerminatedRelationships": [
+                    "success"
+                ],
+                "scheduledState": "ENABLED",
+                "componentType": "PROCESSOR",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "356d73a4-fb81-377c-8ddd-c6d4c8285b40",
+                "name": "LogAttribute",
+                "comments": "",
+                "position": {
+                    "x": 1136.0,
+                    "y": 344.0
+                },
+                "bundle": {
+                    "group": "org.apache.nifi",
+                    "artifact": "nifi-standard-nar",
+                    "version": "1.12.0"
+                },
+                "style": {},
+                "type": "org.apache.nifi.processors.standard.LogAttribute",
+                "properties": {
+                    "Log prefix": null,
+                    "character-set": "UTF-8",
+                    "Log Level": "info",
+                    "attributes-to-ignore-regex": null,
+                    "Attributes to Ignore": null,
+                    "Attributes to Log": null,
+                    "attributes-to-log-regex": ".*",
+                    "Log Payload": "false"
+                },
+                "propertyDescriptors": {
+                    "Log prefix": {
+                        "name": "Log prefix",
+                        "displayName": "Log prefix",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "character-set": {
+                        "name": "character-set",
+                        "displayName": "Character Set",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Log Level": {
+                        "name": "Log Level",
+                        "displayName": "Log Level",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "attributes-to-ignore-regex": {
+                        "name": "attributes-to-ignore-regex",
+                        "displayName": "Attributes to Ignore by Regular Expression",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Attributes to Ignore": {
+                        "name": "Attributes to Ignore",
+                        "displayName": "Attributes to Ignore",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Attributes to Log": {
+                        "name": "Attributes to Log",
+                        "displayName": "Attributes to Log",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "attributes-to-log-regex": {
+                        "name": "attributes-to-log-regex",
+                        "displayName": "Attributes to Log by Regular Expression",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Log Payload": {
+                        "name": "Log Payload",
+                        "displayName": "Log Payload",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    }
+                },
+                "schedulingPeriod": "0 sec",
+                "schedulingStrategy": "TIMER_DRIVEN",
+                "executionNode": "ALL",
+                "penaltyDuration": "30 sec",
+                "yieldDuration": "1 sec",
+                "bulletinLevel": "WARN",
+                "runDurationMillis": 0,
+                "concurrentlySchedulableTaskCount": 1,
+                "autoTerminatedRelationships": [
+                    "success"
+                ],
+                "scheduledState": "ENABLED",
+                "componentType": "PROCESSOR",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "aeaf6d5d-6c5a-3aff-a8f9-cfdc2b729b33",
+                "name": "LogAttribute",
+                "comments": "",
+                "position": {
+                    "x": 192.0,
+                    "y": 936.0
+                },
+                "bundle": {
+                    "group": "org.apache.nifi",
+                    "artifact": "nifi-standard-nar",
+                    "version": "1.12.0"
+                },
+                "style": {},
+                "type": "org.apache.nifi.processors.standard.LogAttribute",
+                "properties": {
+                    "Log prefix": null,
+                    "character-set": "UTF-8",
+                    "Log Level": "info",
+                    "attributes-to-ignore-regex": null,
+                    "Attributes to Ignore": null,
+                    "Attributes to Log": null,
+                    "attributes-to-log-regex": ".*",
+                    "Log Payload": "false"
+                },
+                "propertyDescriptors": {
+                    "Log prefix": {
+                        "name": "Log prefix",
+                        "displayName": "Log prefix",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "character-set": {
+                        "name": "character-set",
+                        "displayName": "Character Set",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Log Level": {
+                        "name": "Log Level",
+                        "displayName": "Log Level",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "attributes-to-ignore-regex": {
+                        "name": "attributes-to-ignore-regex",
+                        "displayName": "Attributes to Ignore by Regular Expression",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Attributes to Ignore": {
+                        "name": "Attributes to Ignore",
+                        "displayName": "Attributes to Ignore",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Attributes to Log": {
+                        "name": "Attributes to Log",
+                        "displayName": "Attributes to Log",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "attributes-to-log-regex": {
+                        "name": "attributes-to-log-regex",
+                        "displayName": "Attributes to Log by Regular Expression",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Log Payload": {
+                        "name": "Log Payload",
+                        "displayName": "Log Payload",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    }
+                },
+                "schedulingPeriod": "0 sec",
+                "schedulingStrategy": "TIMER_DRIVEN",
+                "executionNode": "ALL",
+                "penaltyDuration": "30 sec",
+                "yieldDuration": "1 sec",
+                "bulletinLevel": "WARN",
+                "runDurationMillis": 0,
+                "concurrentlySchedulableTaskCount": 1,
+                "autoTerminatedRelationships": [
+                    "success"
+                ],
+                "scheduledState": "ENABLED",
+                "componentType": "PROCESSOR",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "18ca6948-75d9-3144-9b8b-84d23c39a909",
+                "name": "LogAttribute",
+                "comments": "",
+                "position": {
+                    "x": 896.0,
+                    "y": 952.0
+                },
+                "bundle": {
+                    "group": "org.apache.nifi",
+                    "artifact": "nifi-standard-nar",
+                    "version": "1.12.0"
+                },
+                "style": {},
+                "type": "org.apache.nifi.processors.standard.LogAttribute",
+                "properties": {
+                    "Log prefix": null,
+                    "character-set": "UTF-8",
+                    "Log Level": "info",
+                    "attributes-to-ignore-regex": null,
+                    "Attributes to Ignore": null,
+                    "Attributes to Log": null,
+                    "attributes-to-log-regex": ".*",
+                    "Log Payload": "false"
+                },
+                "propertyDescriptors": {
+                    "Log prefix": {
+                        "name": "Log prefix",
+                        "displayName": "Log prefix",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "character-set": {
+                        "name": "character-set",
+                        "displayName": "Character Set",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Log Level": {
+                        "name": "Log Level",
+                        "displayName": "Log Level",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "attributes-to-ignore-regex": {
+                        "name": "attributes-to-ignore-regex",
+                        "displayName": "Attributes to Ignore by Regular Expression",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Attributes to Ignore": {
+                        "name": "Attributes to Ignore",
+                        "displayName": "Attributes to Ignore",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Attributes to Log": {
+                        "name": "Attributes to Log",
+                        "displayName": "Attributes to Log",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "attributes-to-log-regex": {
+                        "name": "attributes-to-log-regex",
+                        "displayName": "Attributes to Log by Regular Expression",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Log Payload": {
+                        "name": "Log Payload",
+                        "displayName": "Log Payload",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    }
+                },
+                "schedulingPeriod": "0 sec",
+                "schedulingStrategy": "TIMER_DRIVEN",
+                "executionNode": "ALL",
+                "penaltyDuration": "30 sec",
+                "yieldDuration": "1 sec",
+                "bulletinLevel": "WARN",
+                "runDurationMillis": 0,
+                "concurrentlySchedulableTaskCount": 1,
+                "autoTerminatedRelationships": [
+                    "success"
+                ],
+                "scheduledState": "ENABLED",
+                "componentType": "PROCESSOR",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "d368f774-f45f-3e02-8011-6446e6af1838",
+                "name": "LogAttribute",
+                "comments": "",
+                "position": {
+                    "x": 1128.0,
+                    "y": 128.0
+                },
+                "bundle": {
+                    "group": "org.apache.nifi",
+                    "artifact": "nifi-standard-nar",
+                    "version": "1.12.0"
+                },
+                "style": {},
+                "type": "org.apache.nifi.processors.standard.LogAttribute",
+                "properties": {
+                    "Log prefix": null,
+                    "character-set": "UTF-8",
+                    "Log Level": "info",
+                    "attributes-to-ignore-regex": null,
+                    "Attributes to Ignore": null,
+                    "Attributes to Log": null,
+                    "attributes-to-log-regex": ".*",
+                    "Log Payload": "false"
+                },
+                "propertyDescriptors": {
+                    "Log prefix": {
+                        "name": "Log prefix",
+                        "displayName": "Log prefix",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "character-set": {
+                        "name": "character-set",
+                        "displayName": "Character Set",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Log Level": {
+                        "name": "Log Level",
+                        "displayName": "Log Level",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "attributes-to-ignore-regex": {
+                        "name": "attributes-to-ignore-regex",
+                        "displayName": "Attributes to Ignore by Regular Expression",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Attributes to Ignore": {
+                        "name": "Attributes to Ignore",
+                        "displayName": "Attributes to Ignore",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Attributes to Log": {
+                        "name": "Attributes to Log",
+                        "displayName": "Attributes to Log",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "attributes-to-log-regex": {
+                        "name": "attributes-to-log-regex",
+                        "displayName": "Attributes to Log by Regular Expression",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    },
+                    "Log Payload": {
+                        "name": "Log Payload",
+                        "displayName": "Log Payload",
+                        "identifiesControllerService": false,
+                        "sensitive": false
+                    }
+                },
+                "schedulingPeriod": "0 sec",
+                "schedulingStrategy": "TIMER_DRIVEN",
+                "executionNode": "ALL",
+                "penaltyDuration": "30 sec",
+                "yieldDuration": "1 sec",
+                "bulletinLevel": "WARN",
+                "runDurationMillis": 0,
+                "concurrentlySchedulableTaskCount": 1,
+                "autoTerminatedRelationships": [
+                    "success"
+                ],
+                "scheduledState": "ENABLED",
+                "componentType": "PROCESSOR",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            }
+        ],
+        "inputPorts": [],
+        "outputPorts": [],
+        "connections": [
+            {
+                "identifier": "dd37c701-a134-3d14-9fed-35a9c6ce9a8b",
+                "name": "",
+                "source": {
+                    "id": "94d24a20-929e-31cd-b5fc-60a3f549f0b0",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "JoltTransformJSON",
+                    "comments": ""
+                },
+                "destination": {
+                    "id": "f6de5fe3-e4f1-35d7-b40f-39c84a7d3653",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "ConvertJSONToSQL",
+                    "comments": ""
+                },
+                "labelIndex": 1,
+                "zIndex": 0,
+                "selectedRelationships": [
+                    "success"
+                ],
+                "backPressureObjectThreshold": 10000,
+                "backPressureDataSizeThreshold": "1 GB",
+                "flowFileExpiration": "0 sec",
+                "prioritizers": [],
+                "bends": [],
+                "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+                "partitioningAttribute": "",
+                "loadBalanceCompression": "DO_NOT_COMPRESS",
+                "componentType": "CONNECTION",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "e00601b0-4f5c-3ce4-a557-db9205f994e5",
+                "name": "",
+                "source": {
+                    "id": "f6de5fe3-e4f1-35d7-b40f-39c84a7d3653",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "ConvertJSONToSQL",
+                    "comments": ""
+                },
+                "destination": {
+                    "id": "356d73a4-fb81-377c-8ddd-c6d4c8285b40",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "LogAttribute",
+                    "comments": ""
+                },
+                "labelIndex": 1,
+                "zIndex": 0,
+                "selectedRelationships": [
+                    "original",
+                    "failure"
+                ],
+                "backPressureObjectThreshold": 10000,
+                "backPressureDataSizeThreshold": "1 GB",
+                "flowFileExpiration": "0 sec",
+                "prioritizers": [],
+                "bends": [],
+                "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+                "partitioningAttribute": "",
+                "loadBalanceCompression": "DO_NOT_COMPRESS",
+                "componentType": "CONNECTION",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "c7cb780f-8855-3aa5-90a9-b8b05625427c",
+                "name": "",
+                "source": {
+                    "id": "586dee64-6b28-3786-8377-12615ef14dd9",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "InvokeHTTP",
+                    "comments": ""
+                },
+                "destination": {
+                    "id": "f7382d3c-2253-3e03-b593-a94ce356317e",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "LogAttribute",
+                    "comments": ""
+                },
+                "labelIndex": 1,
+                "zIndex": 0,
+                "selectedRelationships": [
+                    "No Retry",
+                    "Retry",
+                    "Failure"
+                ],
+                "backPressureObjectThreshold": 10000,
+                "backPressureDataSizeThreshold": "1 GB",
+                "flowFileExpiration": "0 sec",
+                "prioritizers": [],
+                "bends": [],
+                "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+                "partitioningAttribute": "",
+                "loadBalanceCompression": "DO_NOT_COMPRESS",
+                "componentType": "CONNECTION",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "006371a6-88e4-31b8-b75b-5bbf23ef6ab5",
+                "name": "",
+                "source": {
+                    "id": "d7cac7f6-0152-3584-a145-4f87fe59b7f4",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "PutSQL",
+                    "comments": ""
+                },
+                "destination": {
+                    "id": "aeaf6d5d-6c5a-3aff-a8f9-cfdc2b729b33",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "LogAttribute",
+                    "comments": ""
+                },
+                "labelIndex": 1,
+                "zIndex": 0,
+                "selectedRelationships": [
+                    "success"
+                ],
+                "backPressureObjectThreshold": 10000,
+                "backPressureDataSizeThreshold": "1 GB",
+                "flowFileExpiration": "0 sec",
+                "prioritizers": [],
+                "bends": [],
+                "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+                "partitioningAttribute": "",
+                "loadBalanceCompression": "DO_NOT_COMPRESS",
+                "componentType": "CONNECTION",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "90851036-105f-3b46-99be-d40d45379a21",
+                "name": "",
+                "source": {
+                    "id": "d7cac7f6-0152-3584-a145-4f87fe59b7f4",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "PutSQL",
+                    "comments": ""
+                },
+                "destination": {
+                    "id": "18ca6948-75d9-3144-9b8b-84d23c39a909",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "LogAttribute",
+                    "comments": ""
+                },
+                "labelIndex": 1,
+                "zIndex": 0,
+                "selectedRelationships": [
+                    "failure",
+                    "retry"
+                ],
+                "backPressureObjectThreshold": 10000,
+                "backPressureDataSizeThreshold": "1 GB",
+                "flowFileExpiration": "0 sec",
+                "prioritizers": [],
+                "bends": [],
+                "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+                "partitioningAttribute": "",
+                "loadBalanceCompression": "DO_NOT_COMPRESS",
+                "componentType": "CONNECTION",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "aa5e9e07-94cc-39da-b289-a4d20a7aec85",
+                "name": "",
+                "source": {
+                    "id": "586dee64-6b28-3786-8377-12615ef14dd9",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "InvokeHTTP",
+                    "comments": ""
+                },
+                "destination": {
+                    "id": "94d24a20-929e-31cd-b5fc-60a3f549f0b0",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "JoltTransformJSON",
+                    "comments": ""
+                },
+                "labelIndex": 1,
+                "zIndex": 0,
+                "selectedRelationships": [
+                    "Response",
+                    "Original"
+                ],
+                "backPressureObjectThreshold": 10000,
+                "backPressureDataSizeThreshold": "1 GB",
+                "flowFileExpiration": "0 sec",
+                "prioritizers": [],
+                "bends": [],
+                "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+                "partitioningAttribute": "",
+                "loadBalanceCompression": "DO_NOT_COMPRESS",
+                "componentType": "CONNECTION",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "8198cd43-edbd-3a3b-9abe-5be877fa2969",
+                "name": "",
+                "source": {
+                    "id": "94d24a20-929e-31cd-b5fc-60a3f549f0b0",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "JoltTransformJSON",
+                    "comments": ""
+                },
+                "destination": {
+                    "id": "d368f774-f45f-3e02-8011-6446e6af1838",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "LogAttribute",
+                    "comments": ""
+                },
+                "labelIndex": 1,
+                "zIndex": 0,
+                "selectedRelationships": [
+                    "failure"
+                ],
+                "backPressureObjectThreshold": 10000,
+                "backPressureDataSizeThreshold": "1 GB",
+                "flowFileExpiration": "0 sec",
+                "prioritizers": [],
+                "bends": [],
+                "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+                "partitioningAttribute": "",
+                "loadBalanceCompression": "DO_NOT_COMPRESS",
+                "componentType": "CONNECTION",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "d0e271d9-021d-3bf0-bfee-530521dbac40",
+                "name": "",
+                "source": {
+                    "id": "d7cac7f6-0152-3584-a145-4f87fe59b7f4",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "PutSQL",
+                    "comments": ""
+                },
+                "destination": {
+                    "id": "d7cac7f6-0152-3584-a145-4f87fe59b7f4",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "PutSQL",
+                    "comments": ""
+                },
+                "labelIndex": 1,
+                "zIndex": 0,
+                "selectedRelationships": [
+                    "retry"
+                ],
+                "backPressureObjectThreshold": 10000,
+                "backPressureDataSizeThreshold": "1 GB",
+                "flowFileExpiration": "0 sec",
+                "prioritizers": [],
+                "bends": [
+                    {
+                        "x": 971.0,
+                        "y": 677.0
+                    },
+                    {
+                        "x": 971.0,
+                        "y": 727.0
+                    }
+                ],
+                "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+                "partitioningAttribute": "",
+                "loadBalanceCompression": "DO_NOT_COMPRESS",
+                "componentType": "CONNECTION",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            },
+            {
+                "identifier": "024bbb66-7421-3214-91ce-c402b932c1e7",
+                "name": "",
+                "source": {
+                    "id": "f6de5fe3-e4f1-35d7-b40f-39c84a7d3653",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "ConvertJSONToSQL",
+                    "comments": ""
+                },
+                "destination": {
+                    "id": "d7cac7f6-0152-3584-a145-4f87fe59b7f4",
+                    "type": "PROCESSOR",
+                    "groupId": "fb31ec9f-c723-3af6-9022-dcae5fdff2af",
+                    "name": "PutSQL",
+                    "comments": ""
+                },
+                "labelIndex": 1,
+                "zIndex": 0,
+                "selectedRelationships": [
+                    "sql"
+                ],
+                "backPressureObjectThreshold": 10000,
+                "backPressureDataSizeThreshold": "1 GB",
+                "flowFileExpiration": "0 sec",
+                "prioritizers": [],
+                "bends": [],
+                "loadBalanceStrategy": "DO_NOT_LOAD_BALANCE",
+                "partitioningAttribute": "",
+                "loadBalanceCompression": "DO_NOT_COMPRESS",
+                "componentType": "CONNECTION",
+                "groupIdentifier": "fb31ec9f-c723-3af6-9022-dcae5fdff2af"
+            }
+        ],
+        "labels": [],
+        "funnels": [],
+        "controllerServices": [],
+        "variables": {},
+        "flowFileConcurrency": "UNBOUNDED",
+        "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+        "componentType": "PROCESS_GROUP"
+    },
+    "externalControllerServices": {
+        "91718fa3-790e-30df-aa19-301ffb6119ba": {
+            "identifier": "91718fa3-790e-30df-aa19-301ffb6119ba",
+            "name": "DBCPConnectionPool"
+        }
+    },
+    "parameterContexts": {},
+    "flowEncodingVersion": "1.0"
+}
