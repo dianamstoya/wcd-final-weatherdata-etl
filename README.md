@@ -24,3 +24,8 @@ The following files have been included in the repository:
 - Nifi flow
 - pyspark script
 - Power BI dashboard
+
+## Additional notes
+
+The schedule for the Nifi flow is every 61 seconds. The API provides data every 60 seconds, although the weather station frequency is less than that (aka actual measurements occur at less frequent interval). The Power BI dashboard uses DirectQuery which is a type of live connection to the Athena table that allows for near realtime data to be visualized.
+ 
