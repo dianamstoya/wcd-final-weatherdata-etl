@@ -1,0 +1,1 @@
+{ "Sasl": { "Scram": { "Enabled": false }, "Iam": { "Enabled": false } }, "Tls": { "CertificateAuthorityArnList": [], "Enabled": false }, "Unauthenticated": { "Enabled": true } }
